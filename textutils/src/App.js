@@ -19,11 +19,14 @@ function App() {
       setmode("dark");
       document.body.style.backgroundColor = "gray";
       showAleart("Change dark mode", "info");
+      document.title = 'TextUtils - Dark Mode '
     }
     else {
       setmode("light");
       document.body.style.backgroundColor = "white";
       showAleart("Change dark mode", "info");
+      document.title = 'TextUtils - Light Mode '
+
     }
   };
 
