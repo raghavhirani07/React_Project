@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Navbar(props) {
   return (
-    <nav className='navbar navbar-expand-lg navbar-dark bg-primary h6'>
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} h6`}>
       <div className='container-fluid'>
       {
       /* -------------------------------------------------------------------------- */
@@ -59,15 +59,12 @@ function Navbar(props) {
               Search
             </button>
           </form> */}
+
+
         </div>
       </div>
     </nav>
   )
 }
-
 export default Navbar
 
-Navbar.defaultProps = {title : 'Not Found'}
-// Navbar.propsTypes = {
-//     title: propsTypes.string
-// }
