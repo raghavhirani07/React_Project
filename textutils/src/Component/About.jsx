@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 function About() {
+  const [mystyle, setmystyle] = useState({backgroundColor: "antiquewhite"});
+  const [btntext, setbtntext] =useState('Dark mode');
+
+  const tooglebtn = () => {
+    if(mystyle.backgroundColor === 'antiquewhite'){
+        setmystyle({backgroundColor:'black'})
+        setbtntext('Light mode')
+    }
+    else{
+        setmystyle({backgroundColor:'antiquewhite'})
+        setbtntext('Dark mode')
+    }
+
+  }
   return (
-    <div className='container'>
+    <div className='container mt-4 w-100 h-100' style={mystyle}>
       <div className='jumbotron p-3 p-md-5 text-white rounded bg-dark'>
         <div className='col-md-6 px-0'>
           <h1 className='display-4 font-italic'>
@@ -20,6 +34,7 @@ function About() {
           </p>
         </div>
       </div>
+      <button className='btn btn-primary mt-5 ' onClick={tooglebtn}>{btntext} </button>
     </div>
   );
 }
