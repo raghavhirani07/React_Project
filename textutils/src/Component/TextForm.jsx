@@ -25,7 +25,7 @@ function TextForm(props) {
     <>
       <div className='container'>
         <div className='mb-3 mt-4'>
-          <label for='myBox' className='form-label h4'>
+          <label htmlFor='myBox' className='form-label h4'>
             {props.header}
           </label>
           <textarea
