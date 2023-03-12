@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import LoginReg from "./Component/Page/auth/LoginReg";
+import ResetPassword from "./Component/Page/auth/ResetPassword";
+import SendPasswordResetEmail from "./Component/Page/auth/SendPasswordResetEmail";
 import Contact from "./Component/Page/Contact";
 import Home from "./Component/Page/Home";
 import Layout from "./Component/Page/Layout";
@@ -21,6 +23,12 @@ function App() {
           <Route
             path='login'
             element={<LoginReg />}></Route>
+          <Route
+            path='sendpasswordresetemail'
+            element={<SendPasswordResetEmail />}></Route>
+          <Route
+            path='reset'
+            element={<ResetPassword />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
